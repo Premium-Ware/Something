@@ -56,8 +56,5 @@ if setfflag then
     setfflag("HumanoidParallelRemoveNoPhysics", "False")
     setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
 end
-if setfpscap then
-    setfpscap(100)
-end
 
 game:GetService("ScriptContext"):SetTimeout(0.5)
