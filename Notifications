@@ -115,7 +115,8 @@ local CoreGui = game:GetService("CoreGui")
 
 -- Interface Management
 local Rayfield = game:GetObjects("rbxassetid://10804731440")[1]
-
+local Rayfield.Name = "Notify"
+local RayfieldOld = "NotifyOld"
 
 
 if gethui then
@@ -131,16 +132,16 @@ end
 
 if gethui then
 	for _, Interface in ipairs(gethui():GetChildren()) do
-		if Interface.Name == "Notificat" and Interface ~= Rayfield then
+		if Interface.Name == Rayfield.Name and Interface ~= Rayfield then
 			Interface.Enabled = false
-			Interface.Name = "Rayfield-Old"
+			Interface.Name = RayfieldOld
 		end
 	end
 else
 	for _, Interface in ipairs(CoreGui:GetChildren()) do
-		if Interface.Name == Notificat and Interface ~= Rayfield then
+		if Interface.Name == Rayfield.Name and Interface ~= Rayfield then
 			Interface.Enabled = false
-			Interface.Name = "Rayfield-Old"
+			Interface.Name = RayfieldOld
 		end
 	end
 end
